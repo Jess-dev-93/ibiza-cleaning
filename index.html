@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IBIZA Commercial Cleaning - Professional office, medical, and retail cleaning services in Sydney. 250+ happy clients, 4.9★ rating.">
+  <title>IBIZA Contract Cleaning | Sydney Commercial Cleaners</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2917/2917995.png">
+
+  <style>
+    /* === VARIABLES === */
+    :root {
+      --green: #2E8B57;
+      --blue: #1E90FF;
+      --blue-hover: #0d6efd;
+      --dark: #222;
+      --gray: #555;
+      --bg-soft: #f4f6f8;
+      --bg-hero-start: #e7fbe9;
+      --transition: all 0.3s ease;
+    }
+
+    /* === RESET & BASE === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; }
+
+    /* === TOP BAR === */
+    .top-bar {
+      background-color: var(--dark);
+      color: #ccc;
+      padding: 0.5rem 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .top-bar-content { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar a:hover { color: white; }
+    .top-bar i { margin-right: 6px; color: var(--green); }
+
+    /* === HEADER === */
+    .header {
+      background: white;
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .header-layout { display: flex; justify-content: space-between; align-items: center; }
+    .logo-area { display: flex; align-items: center; gap: 10px; }
+    .logo-img { height: 45px; width: auto; object-fit: contain; }
+    .logo-text { 
+      display: flex; 
+      flex-direction: column; 
+      line-height: 1;
+      border-left: 2px solid var(--green);
+      padding-left: 12px;
+      margin-left: 12px;
+    }
+    .brand-name { font-weight: 800; font-size: 1.4rem; color: var(--dark); letter-spacing: -0.5px; }
+    .brand-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+
+    /* === ENHANCED NAVIGATION === */
+    .nav { display: flex; align-items: center; gap: 2.5rem; }
+    .nav a:not(.btn-header) {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #444;
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav a:not(.btn-header):after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: var(--blue);
+      transition: width 0.3s ease;
+    }
+    .nav a:not(.btn-header):hover:after { width: 100%; }
+    .nav a:not(.btn-header):hover { color: var(--blue); }
+    .btn-header {
+      background: var(--blue);
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(30, 144, 255, 0.2);
+    }
+    .btn-header:hover { 
+      background: var(--blue-hover); 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark);
+      cursor: pointer;
+    }
+
+    /* === SECTIONS GENERAL === */
+    section { padding: 3.5rem 0; }
+    h2 { font-size: 2.2rem; text-align: center; margin-bottom: 0.5rem; font-weight: 700; }
+    .subtitle { text-align: center; color: var(--gray); margin-bottom: 2rem; }
+
+    /* === HERO SECTION === */
+    .hero { background: white; padding: 1.5rem 0; overflow: hidden; }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 4rem;
+    }
+    .hero h1 { font-size: 2.8rem; line-height: 1.15; color: var(--dark); margin-bottom: 1rem; }
+    .highlight { color: var(--blue); }
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-hero-start);
+      color: #2e6b42;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+    .hero p { font-size: 1.05rem; color: var(--gray); margin-bottom: 2rem; max-width: 480px; }
+    .cta-group { display: flex; align-items: center; gap: 1.5rem; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-primary:hover { background: var(--blue-hover); transform: translateY(-2px); }
+    .guarantee-text { font-size: 0.85rem; color: #555; font-weight: 500; }
+    .text-yellow { color: #ffc107; }
+    .text-green { color: var(--green); }
+    .hero-image-box { position: relative; }
+    .hero-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    /* === ENHANCED SERVICES SECTION === */
+    .services { 
+      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+      position: relative;
+    }
+
+    /* Animated background pattern */
+    .services:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(30, 144, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(46, 139, 87, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .services .container { position: relative; z-index: 1; }
+
+    /* Enhanced heading with gradient */
+    .services h2 {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Bold key pricing */
+    .services .subtitle {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .services .subtitle strong {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    
+    /* UPDATED: Animation ready states for scroll animation */
+    .services-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    /* UPDATED: Scroll animation classes */
+    .animate-ready {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .services-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      border-color: var(--green);
+    }
+
+    /* Badge for popular service */
+    .popular-badge {
+      position: absolute;
+      top: -10px;
+      right: 15px;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .icon-box {
+      width: 55px; 
+      height: 55px; 
+      background: var(--bg-hero-start);
+      color: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    /* Icon pulse on hover */
+    .services-card:hover .icon-box {
+      background: var(--green);
+      color: white;
+      animation: pulse 0.6s ease;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .services-card h3 { font-size: 1.25rem; margin-bottom: 0.8rem; font-weight: 700; color: var(--dark); }
+    .services-card ul { margin-bottom: 1.5rem; }
+    .services-card ul li {
+      margin-bottom: 0.6rem;
+      color: #555;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .services-card ul li:before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--green);
+      font-size: 0.8rem;
+      margin-top: 4px;
+      transition: all 0.3s ease;
+    }
+
+    /* Checkmark animation on hover */
+    .services-card:hover ul li:before {
+      transform: scale(1.2);
+      color: var(--blue);
+    }
+
+    /* Highlight key features */
+    .services-card ul li strong {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: gap 0.2s ease;
+    }
+    .btn-link:hover { gap: 12px; color: var(--blue-hover); }
+
+    /* Enhanced CTA link with animated arrow */
+    .btn-link i {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-link:hover i {
+      animation: arrowSlide 0.6s ease infinite;
+    }
+
+    @keyframes arrowSlide {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
+    }
+
+    /* === STATS BAR === */
+    .stats-bar {
+      background: var(--dark);
+      padding: 3rem 0;
+      color: white;
+      border-top: 4px solid var(--green);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+    .stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #aaa;
+      font-weight: 500;
+    }
+
+    /* === WHY US / METHOD === */
+    .about { background: white; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .about-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 2rem;
+      background: white;
+      border: 1px solid #f0f0f0;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .about-item:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .about-icon {
+      background: var(--bg-hero-start);
+      color: var(--green);
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .about-text { text-align: left; }
+    .about-text h3 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--dark); font-weight: 700; }
+    .about-text p { font-size: 0.9rem; color: #666; line-height: 1.6; margin-bottom: 0; }
+
+    /* === TESTIMONIALS === */
+    .testimonials { background-color: var(--bg-soft); }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .review-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: transform 0.3s ease;
+    }
+    .review-card:hover { transform: translateY(-5px); }
+    
+    /* UPDATED: Quote icon now visible */
+    .quote-icon { 
+      font-size: 1.5rem; 
+      color: var(--green);
+      opacity: 0.3;
+      margin-bottom: 1rem; 
+    }
+    
+    .review-card p { font-size: 1rem; color: #555; font-style: italic; line-height: 1.6; margin-bottom: 1.5rem; }
+    .reviewer {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 1rem;
+    }
+    .reviewer strong { color: var(--dark); font-size: 1rem; }
+    .reviewer span { font-size: 0.85rem; color: #888; font-weight: 500; }
+
+    /* === PORTFOLIO SECTION === */
+    .portfolio-section {
+      background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .portfolio-section h2 {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin-top: 4rem;
+    }
+
+    .portfolio-item {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      border-color: var(--blue);
+    }
+
+    .portfolio-image {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .portfolio-item:hover .portfolio-image img {
+      transform: scale(1.08);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    .portfolio-category {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      color: var(--dark);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .portfolio-info {
+      padding: 1.8rem;
+    }
+
+    .portfolio-info h3 {
+      font-size: 1.25rem;
+      color: var(--dark);
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+
+    .portfolio-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stat-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-soft);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--gray);
+      transition: all 0.3s ease;
+    }
+
+    .stat-badge i {
+      color: var(--green);
+      font-size: 0.9rem;
+    }
+
+    .portfolio-item:hover .stat-badge {
+      background: var(--bg-hero-start);
+      color: var(--dark);
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 5rem;
+      padding: 3rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .trust-item:hover {
+      transform: translateX(5px);
+    }
+
+    .trust-item i {
+      font-size: 2rem;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .trust-item span {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.4;
+    }
+
+    .trust-item strong {
+      color: var(--dark);
+      display: block;
+    }
+
+    /* === FAQ === */
+    .faq-section { background: #fafafa; }
+    .faq-container { max-width: 850px; margin: 50px auto; }
+    .faq-item {
+      background: white;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+      border: 1px solid #e2e8f0;
+    }
+    
+    /* UPDATED: Added accessibility attributes */
+    .faq-question {
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--dark);
+      transition: 0.2s;
+    }
+    .faq-question:hover { color: var(--blue); }
+    .faq-question:focus { 
+      outline: 2px solid var(--blue);
+      outline-offset: -2px;
+    }
+    
+    .faq-answer {
+      padding: 0 25px 25px;
+      color: var(--gray);
+      display: none;
+    }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active { border-color: var(--blue); }
+    
+    /* UPDATED: Rotate chevron when active */
+    .faq-item .faq-question i {
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    /* === CONTACT SECTION === */
+    .contact { background: #222; color: white; padding: 3rem 0; text-align: center; }
+    .contact h2 { color: white; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 700; }
+    .contact p { color: #ccc; font-size: 0.9rem; max-width: 500px; margin: 0 auto 1.5rem; }
+    .quote-form {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 8px;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .form-group { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.8rem; }
+    .form-group label { color: #444; font-weight: 700; font-size: 0.8rem; }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #333;
+      transition: all 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      background: white;
+      border-color: var(--blue);
+      outline: none;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .full-width { width: 100%; margin-top: 0.5rem; padding: 0.7rem; font-size: 0.95rem; font-weight: 600; }
+    .contact-footer { margin-top: 1.5rem; color: #777; font-size: 0.85rem; }
+    .contact-footer strong { color: white; }
+
+    /* === ENHANCED FOOTER === */
+    .footer { 
+      background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+      color: #999; 
+      padding: 4rem 0 2rem; 
+      border-top: 3px solid var(--green);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-col h4:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--green);
+    }
+
+    .footer-brand .brand-name { 
+      color: white; 
+      font-weight: 800; 
+      font-size: 1.8rem; 
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      color: #999;
+      line-height: 1.8;
+      font-size: 0.9rem;
+    }
+
+    .footer-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-links-list a {
+      color: #999;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links-list a:before {
+      content: '→';
+      opacity: 0;
+      margin-left: -15px;
+      transition: all 0.3s;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--blue);
+      padding-left: 15px;
+    }
+
+    .footer-links-list a:hover:before {
+      opacity: 1;
+      margin-left: 0;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 1rem;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact-item i {
+      color: var(--green);
+      margin-top: 3px;
+      font-size: 1.1rem;
+    }
+
+    .footer-contact-item a {
+      color: #999;
+      transition: color 0.3s;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--blue);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .footer-bottom-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copyright {
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      width: 35px;
+      height: 35px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background: var(--blue);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* === MOBILE RESPONSIVE === */
+    @media (max-width: 768px) {
+      .top-bar { display: none; }
+      .header { padding: 0.5rem 0; }
+      .logo-text { display: none; }
+      .logo-img { height: 32px; }
+      
+      .nav { 
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        transition: left 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      }
+      
+      .nav.active { left: 0; }
+      .mobile-menu-btn { display: block; }
+      
+      .nav a:not(.btn-header) { font-size: 1.1rem; width: 100%; }
+      .btn-header { width: 100%; text-align: center; }
+      
+      .hero { padding: 1.5rem 0; }
+      .hero-layout { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
+      .hero h1 { font-size: 1.8rem; margin-bottom: 0.5rem; line-height: 1.1; }
+      .hero p { font-size: 0.9rem; margin-bottom: 1rem; max-width: 100%; }
+      .cta-group { flex-direction: column; gap: 1rem; width: 100%; }
+      .btn-primary { width: 100%; }
+      .hero-image-box { order: -1; margin-bottom: 1rem; }
+      .hero-img { height: 250px; }
+      
+      /* UPDATED: Center rating pill on mobile */
+      .rating-pill { 
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      section { padding: 2rem 0; }
+      h2 { font-size: 1.5rem; line-height: 1.2; margin-bottom: 0.4rem; }
+      .subtitle { margin-bottom: 1.2rem; font-size: 0.9rem; }
+      
+      .services-grid, .about-grid, .testimonial-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .services-card { padding: 1rem; }
+      .icon-box, .about-icon { width: 38px; height: 38px; font-size: 1rem; margin-bottom: 0.6rem; }
+      .about-item, .review-card { padding: 1rem; }
+      
+      .contact { padding: 2.5rem 0; }
+      .contact h2 { font-size: 1.4rem; }
+      .quote-form { padding: 1rem; }
+      .form-row { grid-template-columns: 1fr; }
+      
+      .stats-bar { padding: 2rem 0; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .stat-num { font-size: 1.6rem; }
+      
+      /* Portfolio Mobile */
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .portfolio-image {
+        height: 220px;
+      }
+      
+      .portfolio-section h2 {
+        font-size: 1.8rem;
+      }
+      
+      /* Trust Bar Mobile */
+      .trust-bar {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 1.5rem;
+      }
+      
+      /* Footer Mobile */
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom-content { flex-direction: column; text-align: center; }
+    }
+    
+    /* UPDATED: Extra small screens */
+    @media (max-width: 375px) {
+      .container { padding: 0 1rem; }
+      .hero h1 { font-size: 1.5rem; }
+      .btn-primary { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+      .services-card h3 { font-size: 1.1rem; }
+      .stat-badge { padding: 6px 10px; font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-bar-content">
+    <span><i class="fas fa-phone-alt"></i> 0401 624 198</span>
+    <span><i class="fas fa-envelope"></i> info@ibizacleaning.com.au</span>
+    <span><i class="fas fa-map-marker-alt"></i> Serving Greater Sydney</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-layout">
+    <div class="logo-area">
+      <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="IBIZA Logo" class="logo-img" width="800" height="600">
+      <div class="logo-text">
+        <div class="brand-name">IBIZA</div>
+        <div class="brand-tag">Commercial Cleaning</div>
+      </div>
+    </div>
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <nav class="nav" id="mainNav">
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn-header">Get Free Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-layout">
+    <div class="hero-text">
+      <div class="rating-pill">
+        <i class="fas fa-star text-yellow"></i> 4.9/5 Rated (120+ Reviews)
+      </div>
+      
+      <h1>Your Workspace, <span class="highlight">Immaculate.</span></h1>
+      
+      <p>Stop worrying about the mess. We provide hospital-grade cleaning for Sydney offices, clinics, and retail spaces. Reliable, insured, and thorough.</p>
+      
+      <div class="cta-group">
+        <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+        <div class="guarantee-text">
+          <i class="fas fa-shield-alt text-green"></i> 100% Satisfaction Guarantee
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-image-box">
+      <img 
+        src="./assets/images/hero-image.webp" 
+        alt="Clean modern office reception area"
+        class="hero-img"
+        loading="eager"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- ENHANCED SERVICES -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Specialized Cleaning Solutions</h2>
+      <p class="subtitle">
+        Flexible cleaning plans starting at <strong>\$40/hr</strong><br>
+        No lock-in contracts • 100% satisfaction guaranteed
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Corporate & Office -->
+      <div class="services-card">
+        <span class="popular-badge">Most Popular</span>
+        <div class="icon-box"><i class="fas fa-building"></i></div>
+        <h3>Corporate & Office</h3>
+        <ul>
+          <li>Daily, weekly or fortnightly schedules</li>
+          <li>Desks, floors, kitchens & amenities</li>
+          <li><strong>After-hours</strong> security cleaning</li>
+        </ul>
+        <a href="#contact" class="btn-link">Get Office Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <!-- Medical & Healthcare -->
+      <div class="services-card">
+        <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
+        <h3>Medical & Healthcare</h3>
+        <ul>
+          <!-- UPDATED: Added space after strong tag -->
+          <li><strong>AS/NZS 4815</strong> Compliance</li>
+          <li>Hospital-grade disinfection</li>
+          <li>Sterile waiting rooms & labs</li>
+        </ul>
+        <a href="#contact" class="btn-link">Get Medical Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <!-- Retail & Showrooms -->
+      <div class="services-card">
+        <div class="icon-box"><i class="fas fa-store"></i></div>
+        <h3>Retail & Showrooms</h3>
+        <ul>
+          <li>Pre-opening <strong>"Sparkle Clean"</strong></li>
+          <li>High-traffic floor maintenance</li>
+          <li>Windows & glass polishing</li>
+        </ul>
+        <a href="#contact" class="btn-link">Get Retail Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <span class="stat-num">250+</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">98%</span>
+      <span class="stat-label">Retention Rate</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4.9</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">24/7</span>
+      <span class="stat-label">Rapid Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- THE IBIZA STANDARD -->
+<section id="why-us" class="about">
+  <div class="container">
+    <h2>The IBIZA Standard</h2>
+    <p class="subtitle">We don't just clean. We protect your business reputation.</p>
+    
+    <div class="about-grid">
+      <div class="about-item">
+        <div class="about-icon"><i class="fas fa-user-shield"></i></div>
+        <div class="about-text">
+          <h3>Security Vetted Teams</h3>
+          <p>Strict police checks and insurance. We trust our staff so you can too.</p>
+        </div>
+      </div>
+      
+      <div class="about-item">
+        <div class="about-icon"><i class="fas fa-pump-medical"></i></div>
+        <div class="about-text">
+          <h3>Hospital-Grade Hygiene</h3>
+          <p>TGA-listed disinfectants that kill 99.9% of germs without toxic fumes.</p>
+        </div>
+      </div>
+      
+      <div class="about-item">
+        <div class="about-icon"><i class="fas fa-check-double"></i></div>
+        <div class="about-text">
+          <h3>The "Zero-Miss" Guarantee</h3>
+          <p>Same crew, same time, every visit. We never miss a shift.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK PORTFOLIO -->
+<section class="portfolio-section">
+  <div class="container">
+    <div class="text-center">
+      <h2>Trusted by Sydney's Leading Businesses</h2>
+      <p class="subtitle">Premium spaces we keep immaculate, day in and day out.</p>
+    </div>
+    
+    <div class="portfolio-grid">
+      <!-- Medical Center -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200" alt="Medical Center Lobby" loading="lazy" width="800" height="600">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Medical Facility</span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Parramatta Medical Center</h3>
+          <div class="portfolio-stats">
+            <div class="stat-badge">
+              <i class="fas fa-calendar-check"></i>
+              <span>Daily Service</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-shield-virus"></i>
+              <span>AS/NZS 4815</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-star"></i>
+              <span>5.0 Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Corporate Office -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200" alt="Corporate Office" loading="lazy" width="800" height="600">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Corporate Office</span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Sydney CBD Corporate Tower</h3>
+          <div class="portfolio-stats">
+            <div class="stat-badge">
+              <i class="fas fa-users"></i>
+              <span>200+ Staff</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-moon"></i>
+              <span>After Hours</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-clock"></i>
+              <span>3 Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Retail Space -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200" alt="Retail Showroom" loading="lazy" width="800" height="600">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Retail Space</span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Westfield Shopping Center</h3>
+          <div class="portfolio-stats">
+            <div class="stat-badge">
+              <i class="fas fa-broom"></i>
+              <span>High-Traffic</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-sun"></i>
+              <span>Daily Clean</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-thumbs-up"></i>
+              <span>98% Score</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dental Practice -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200" alt="Dental Practice" loading="lazy" width="800" height="600">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Healthcare</span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>North Shore Dental Practice</h3>
+          <div class="portfolio-stats">
+            <div class="stat-badge">
+              <i class="fas fa-pump-medical"></i>
+              <span>Hospital-Grade</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-certificate"></i>
+              <span>Certified</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-check-circle"></i>
+              <span>100% Sterile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Office -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200" alt="Modern Office Space" loading="lazy" width="800" height="600">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Tech Office</span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Tech Startup Hub, Surry Hills</h3>
+          <div class="portfolio-stats">
+            <div class="stat-badge">
+              <i class="fas fa-leaf"></i>
+              <span>Eco-Friendly</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-redo"></i>
+              <span>3x Weekly</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-award"></i>
+              <span>Award-Winner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restaurant/Cafe -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200" alt="Restaurant Interior" loading="lazy" width="800" height="600">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Hospitality</span>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Circular Quay Restaurant</h3>
+          <div class="portfolio-stats">
+            <div class="stat-badge">
+              <i class="fas fa-utensils"></i>
+              <span>Food-Safe</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-clock"></i>
+              <span>Early AM</span>
+            </div>
+            <div class="stat-badge">
+              <i class="fas fa-star"></i>
+              <span>5-Star Venue</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <i class="fas fa-certificate"></i>
+        <span><strong>Fully Insured</strong> & Licensed</span>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-user-shield"></i>
+        <span><strong>Police Checked</strong> Staff</span>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-leaf"></i>
+        <span><strong>Eco-Certified</strong> Products</span>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-headset"></i>
+        <span><strong>24/7</strong> Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews" class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>Trusted by Sydney Businesses</h2>
+      <p class="subtitle">From CBD high-rises to local medical centers.</p>
+    </div>
+    
+    <div class="testimonial-grid">
+      <div class="review-card">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>"IBIZA turned our chaotic lobby into a 5-star entrance daily. We haven't had a single complaint in 12 months."</p>
+        <div class="reviewer">
+          <strong>Michael T.</strong>
+          <span>Office Manager, Sydney CBD</span>
+        </div>
+      </div>
+      
+      <div class="review-card">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>"Our clinic passed every infection-control audit thanks to their strict protocols. Absolutely priceless service."</p>
+        <div class="reviewer">
+          <strong>Dr. Elena R.</strong>
+          <span>Medical Practice, Parramatta</span>
+        </div>
+      </div>
+      
+      <div class="review-card">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p>"They clean around our 6am trading hours without a single disruption. Finding a team this reliable is rare."</p>
+        <div class="reviewer">
+          <strong>Vanessa L.</strong>
+          <span>Westfield Miranda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<!-- UPDATED: Added proper section class -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <div class="text-center">
+      <h2>Facility Manager FAQ</h2>
+    </div>
+    <div class="faq-container">
+      <!-- UPDATED: Added accessibility attributes -->
+      <div class="faq-item">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Are your staff security cleared? 
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Absolutely. Every IBIZA cleaner undergoes a background check and a strict internal vetting process before entering a client site.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          What if we have an emergency spill or event? 
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We offer 24/7 rapid response for our contract clients. We can usually have a team on-site within 2-4 hours anywhere in Greater Sydney.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+          Do you offer green-only cleaning? 
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes. Sustainability is at our core. We use eco-friendly products that are tough on bacteria but safe for your staff's respiratory health.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Get Your Tailored Cleaning Proposal</h2>
+    <p>Fill out the form below. We'll inspect your floor plans and send a custom quote within 24 hours.</p>
+    
+    <!-- UPDATED: Added name attributes and form action placeholder -->
+    <form class="quote-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="business_name">Business Name</label>
+        <input type="text" id="business_name" name="business_name" placeholder="e.g. Westfield Sydney" required>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="service_type">Service Needed</label>
+          <select id="service_type" name="service_type" required>
+            <option value="">Select Service...</option>
+            <option value="corporate">Corporate Office</option>
+            <option value="medical">Medical/Healthcare</option>
+            <option value="retail">Retail/Showroom</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="04xx xxx xxx" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="name@company.com.au" required>
+      </div>
+      
+      <button type="submit" class="btn btn-primary full-width">Request Proposal</button>
+    </form>
+    
+    <div class="contact-footer">
+      <i class="fas fa-phone-alt"></i> Prefer to talk? Call <strong>0401 624 198</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ENHANCED FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-col footer-brand">
+        <div class="brand-name">IBIZA</div>
+        <p>Sydney's leader in precision commercial cleaning and hygiene management. Serving CBD, Parramatta, and Greater Sydney since 2015.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links-list">
+          <a href="#services">Our Services</a>
+          <a href="#why-us">Why Choose Us</a>
+          <a href="#reviews">Client Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Get Quote</a>
+        </div>
+      </div>
+      
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links-list">
+          <a href="#services">Corporate Cleaning</a>
+          <a href="#services">Medical Facilities</a>
+          <a href="#services">Retail Spaces</a>
+          <a href="#services">Emergency Response</a>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <a href="tel:0401624198">0401 624 198</a><br>
+            <small>24/7 Support Line</small>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <a href="mailto:info@ibizacleaning.com.au">info@ibizacleaning.com.au</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            Greater Sydney Area<br>
+            <small>CBD, Parramatta & Suburbs</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-copyright">
+          &copy; 2025 IBIZA Contract Cleaning Sydney. ABN: 12 345 678 910. All Rights Reserved.
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mainNav = document.getElementById('mainNav');
+  
+  mobileMenuBtn.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+    const icon = mobileMenuBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+  
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-times');
+    });
+  });
+
+  // UPDATED: Enhanced FAQ Toggle with accessibility
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    // Click handler
+    const toggleFaq = () => {
+      // Close all other FAQs
+      document.querySelectorAll('.faq-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('active');
+          other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        }
+      });
+      // Toggle clicked FAQ
+      item.classList.toggle('active');
+      const isExpanded = item.classList.contains('active');
+      question.setAttribute('aria-expanded', isExpanded);
+    };
+    
+    question.addEventListener('click', toggleFaq);
+    
+    // Keyboard accessibility
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFaq();
+      }
+    });
+  });
+
+  // UPDATED: Scroll animation with Intersection Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const animateOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        animateOnScroll.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Apply to elements
+  document.querySelectorAll('.services-card, .portfolio-item, .about-item, .review-card').forEach((el, index) => {
+    el.classList.add('animate-ready');
+    el.style.animationDelay = `${index * 0.1}s`;
+    animateOnScroll.observe(el);
+  });
+</script>
+
+</body>
+</html>
